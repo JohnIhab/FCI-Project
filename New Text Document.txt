@@ -1,0 +1,59 @@
+
+.cards {
+  display flex;
+  gap 20px;
+  padding 10px 15px;
+  z-index 10000;
+  height400px;
+  position absolute;
+  top calc(100vh - 130px);
+  
+}
+.cards .card {
+  background-color var(--body-colr);
+  color white;
+  padding 12px;
+  display flex;
+  flex-direction column;
+  gap 15px;
+  text-align start;
+  transition 0.3s;
+  width 300px;
+  max-height 102px;
+  transition .7s;
+  border-radius 6px;
+}
+.cards .card:hover {
+  background-color var(--yellow-color);
+  max-height 300px;
+  transform translateY(-220px);
+}
+.cards .card i {
+  font-size 30px;
+}
+
+.cards .card .data p {
+   display none; 
+  line-height 35px;
+  padding 15px 0;
+  transition 0.3s;
+  transition-delay .4s;
+  opacity 0;
+}
+.cards .card .data a {
+   display none; 
+  color white;
+  text-decoration none;
+  transition 0.3s;
+  transition-delay .4s;
+  opacity 0;
+}
+.cards .card:hover p,
+.cards .card:hover a {
+  display block;
+  opacity 1;
+}
+.cards .card .data a:hover{
+  color var(--body-colr);
+  text-decoration underline;
+}
